@@ -1,5 +1,11 @@
 public class Arrays {
+//    make 3 methods
 
+//1. a method called averageNum that averages all the numers in the array and souts the result
+
+//2. a method called maxNum that prints the largest number in the array
+
+//3. a method called minNum that prints the smallest number in the array
     public int [] nums;
 
     public static void main(String[] args) {
@@ -25,6 +31,9 @@ public class Arrays {
         System.out.println(nums[1]);
         displayarray();
         sumarray();
+        averageNum();
+        maxnum();
+        minnum();
 
     }
     public void arrayfill()
@@ -50,7 +59,45 @@ public class Arrays {
         {
             j = j+nums[k];
         }
-        System.out.println("The total is " + j + ".");
+        System.out.println("The total is " + j );
+    }
+    public void averageNum()
+    { int total;
+        double ave;
+        total=0;
+        for(int k=0; k<nums.length; k++)
+        {
+            total = total+nums[k];
+        }
+        ave = total/nums.length;
+        System.out.println("The average is " + ave);
+    }
+    public void maxnum()
+    {
+        int biggest;
+        biggest = 0;
+        for (int i = 0; i < nums.length; i++)
+        {
+            if(nums[i]>biggest)
+            {
+                biggest = nums[i];
+            }
+        }
+        System.out.println("The largest value is " + biggest);
+    }
+
+    public void minnum()
+    {
+        int smallest;
+        smallest = 101;
+        for (int i = 0; i < nums.length; i++)
+        {
+            if(nums[i]< smallest)
+            {
+                smallest = nums[i];
+            }
+        }
+        System.out.println("The smallest value is " + smallest);
     }
 
 
